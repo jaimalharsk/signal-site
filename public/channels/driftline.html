@@ -1,1 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Driftline | The Signal</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/console.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="branding">
+      <a class="title-link" data-title-link><h1>THE SIGNAL</h1></a>
+      <p class="subtitle">Channel: Driftline</p>
+    </header>
 
+    <h2 class="page-title">Driftline</h2>
+    <p class="page-intro">Narrative logs and stories about building and learning.</p>
+    <section class="transmission-grid" id="signal-list"></section>
+  </main>
+
+  <script src="/assets/js/router.js"></script>
+  <script src="/assets/js/loader.js"></script>
+  <script>SignalLoader.renderChannel('driftline', 'signal-list');</script>
+</body>
+</html>
