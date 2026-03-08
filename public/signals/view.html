@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wavelength | The Signal</title>
+  <title>Signal Viewer | The Signal</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <link rel="stylesheet" href="/assets/css/console.css" />
 </head>
@@ -11,16 +11,20 @@
   <main class="page">
     <header class="branding">
       <a class="title-link" data-title-link><h1>THE SIGNAL</h1></a>
-      <p class="subtitle">Channel: Wavelength</p>
+      <p class="subtitle">Transmission Viewer</p>
     </header>
 
-    <h2 class="page-title">Wavelength</h2>
-    <p class="page-intro">Long-form essays and deep ideas.</p>
-    <section class="transmission-grid" id="signal-list"></section>
+    <section class="viewer">
+      <p class="page-intro">SOURCE: IPFS RELAY</p>
+      <article id="viewer-content" class="viewer-content"></article>
+    </section>
   </main>
 
   <script src="/assets/js/router.js"></script>
-  <script src="/assets/js/loader.js"></script>
-  <script>SignalLoader.renderChannel('wavelength', 'signal-list');</script>
+  <script src="/assets/js/ipfs.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    IPFSViewer.loadCid(params.get('cid'), 'viewer-content');
+  </script>
 </body>
 </html>
