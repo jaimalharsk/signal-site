@@ -27,6 +27,57 @@ body::after {
 
 .page { position: relative; z-index: 1; }
 
+
+.signal-panel {
+  width: 800px;
+  margin: 60px auto;
+  font-family: monospace;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #8aa3ff;
+}
+
+.signal-strength {
+  margin-bottom: 25px;
+}
+
+.meter {
+  height: 8px;
+  background: #111;
+  border: 1px solid #2a3a6d;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.bar {
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg,#00f0ff,#00ff9c);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { width: 60%; }
+  50% { width: 80%; }
+  100% { width: 60%; }
+}
+
+.transmission-feed ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.transmission-feed li {
+  padding: 6px 0;
+  color: #c9d7ff;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+
 @keyframes drift {
   from { transform: translateY(0); }
   to { transform: translateY(-280px); }
